@@ -11,10 +11,10 @@ test("Register test demo", async () => {
     await page.click("text =Register")
     await page.fill('input[name="firstname"]',"Priya");
     await page.fill('input[name="lastname"]',"Bole");
-    await page.fill('input[name="email"]',"priyankaweragoda72@gmail.com");
-    await page.fill('input[name="telephone"]',"0778994718");
-    await page.fill('input[name="password"]',"priya@123");
-    await page.fill('input[name="confirm"]',"priya@123");
+    await page.fill('input[name="email"]',"");
+    await page.fill('input[name="telephone"]',"");
+    await page.fill('input[name="password"]',"");
+    await page.fill('input[name="confirm"]',");
     // Wait for the agree checkbox to be visible before interacting with it
     await page.waitForSelector('input[name="agree"]', { state: 'visible' });
 
