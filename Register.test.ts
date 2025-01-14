@@ -2,6 +2,7 @@ import { chromium, test } from "@playwright/test";
 import { text } from "stream/consumers";
 
 test("Register test demo", async () => {
+    test.setTimeout(60000); 
     const browser = await chromium.launch({ headless: false });  
     const context = await browser.newContext();
     const page = await context.newPage();
@@ -43,15 +44,34 @@ test("Register test demo", async () => {
       // Click on "Mobile Phones"
       await page.click("text= Phone, Tablets & Ipod");
   
-      await page.click("text=HTC Touch HD");
+      await page.click('//*[@id="mz-product-grid-image-28-212408"]/div/div[1]/img');
       console.log("Product 'HTC Touch HD' selected");
-      await page.waitForTimeout(5000);
-
       await page.click('//*[@id="entry_216842"]/button');
+      console.log("clicked 'Add to Cart Button");
+      
+      // Close the browser
+      await browser.close();
+
+    
+
+      
   
      
 
   });
+
+
+
+   
+
+
+
+     
+
+   
+    
+    
+
 
 
 
